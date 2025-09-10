@@ -31,8 +31,8 @@
             this.txtLocation = new System.Windows.Forms.TextBox();
             this.labellocation = new System.Windows.Forms.Label();
             this.cmbCategory = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.Category = new System.Windows.Forms.Label();
+            this.Description = new System.Windows.Forms.Label();
             this.rtbDescription = new System.Windows.Forms.RichTextBox();
             this.btnAttachFile = new System.Windows.Forms.Button();
             this.lblAttachment = new System.Windows.Forms.Label();
@@ -43,15 +43,15 @@
             // 
             // txtLocation
             // 
-            this.txtLocation.Location = new System.Drawing.Point(24, 51);
+            this.txtLocation.Location = new System.Drawing.Point(150, 30);
             this.txtLocation.Name = "txtLocation";
-            this.txtLocation.Size = new System.Drawing.Size(100, 22);
+            this.txtLocation.Size = new System.Drawing.Size(400, 22);
             this.txtLocation.TabIndex = 0;
             // 
             // labellocation
             // 
             this.labellocation.AutoSize = true;
-            this.labellocation.Location = new System.Drawing.Point(42, 20);
+            this.labellocation.Location = new System.Drawing.Point(50, 33);
             this.labellocation.Name = "labellocation";
             this.labellocation.Size = new System.Drawing.Size(58, 16);
             this.labellocation.TabIndex = 1;
@@ -64,42 +64,42 @@
             "Sanitation",
             "Roads",
             "Utilities"});
-            this.cmbCategory.Location = new System.Drawing.Point(190, 158);
+            this.cmbCategory.Location = new System.Drawing.Point(150, 70);
             this.cmbCategory.Name = "cmbCategory";
-            this.cmbCategory.Size = new System.Drawing.Size(121, 24);
+            this.cmbCategory.Size = new System.Drawing.Size(200, 24);
             this.cmbCategory.TabIndex = 2;
             // 
-            // label1
+            // Category
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(220, 129);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 16);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Category";
+            this.Category.AutoSize = true;
+            this.Category.Location = new System.Drawing.Point(50, 73);
+            this.Category.Name = "Category";
+            this.Category.Size = new System.Drawing.Size(62, 16);
+            this.Category.TabIndex = 3;
+            this.Category.Text = "Category";
             // 
-            // label2
+            // Description
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(452, 68);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 16);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Description";
+            this.Description.AutoSize = true;
+            this.Description.Location = new System.Drawing.Point(50, 120);
+            this.Description.Name = "Description";
+            this.Description.Size = new System.Drawing.Size(75, 16);
+            this.Description.TabIndex = 4;
+            this.Description.Text = "Description";
             // 
             // rtbDescription
             // 
-            this.rtbDescription.Location = new System.Drawing.Point(469, 110);
+            this.rtbDescription.Location = new System.Drawing.Point(150, 115);
             this.rtbDescription.Name = "rtbDescription";
-            this.rtbDescription.Size = new System.Drawing.Size(100, 96);
+            this.rtbDescription.Size = new System.Drawing.Size(400, 120);
             this.rtbDescription.TabIndex = 5;
             this.rtbDescription.Text = "";
             // 
             // btnAttachFile
             // 
-            this.btnAttachFile.Location = new System.Drawing.Point(412, 283);
+            this.btnAttachFile.Location = new System.Drawing.Point(150, 255);
             this.btnAttachFile.Name = "btnAttachFile";
-            this.btnAttachFile.Size = new System.Drawing.Size(93, 23);
+            this.btnAttachFile.Size = new System.Drawing.Size(100, 35);
             this.btnAttachFile.TabIndex = 6;
             this.btnAttachFile.Text = "Attach File";
             this.btnAttachFile.UseVisualStyleBackColor = true;
@@ -108,7 +108,7 @@
             // lblAttachment
             // 
             this.lblAttachment.AutoSize = true;
-            this.lblAttachment.Location = new System.Drawing.Point(409, 264);
+            this.lblAttachment.Location = new System.Drawing.Point(50, 260);
             this.lblAttachment.Name = "lblAttachment";
             this.lblAttachment.Size = new System.Drawing.Size(100, 16);
             this.lblAttachment.TabIndex = 7;
@@ -116,9 +116,9 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(177, 336);
+            this.btnSubmit.Location = new System.Drawing.Point(150, 310);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(75, 23);
+            this.btnSubmit.Size = new System.Drawing.Size(100, 35);
             this.btnSubmit.TabIndex = 8;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
@@ -127,7 +127,7 @@
             // lblEngagement
             // 
             this.lblEngagement.AutoSize = true;
-            this.lblEngagement.Location = new System.Drawing.Point(599, 365);
+            this.lblEngagement.Location = new System.Drawing.Point(147, 361);
             this.lblEngagement.Name = "lblEngagement";
             this.lblEngagement.Size = new System.Drawing.Size(127, 16);
             this.lblEngagement.TabIndex = 9;
@@ -135,9 +135,9 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(330, 399);
+            this.btnBack.Location = new System.Drawing.Point(501, 373);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(149, 23);
+            this.btnBack.Size = new System.Drawing.Size(150, 35);
             this.btnBack.TabIndex = 10;
             this.btnBack.Text = "Back to Main Menu";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -147,15 +147,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(650, 420);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblEngagement);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.lblAttachment);
             this.Controls.Add(this.btnAttachFile);
             this.Controls.Add(this.rtbDescription);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Description);
+            this.Controls.Add(this.Category);
             this.Controls.Add(this.cmbCategory);
             this.Controls.Add(this.labellocation);
             this.Controls.Add(this.txtLocation);
@@ -171,8 +171,8 @@
         private System.Windows.Forms.TextBox txtLocation;
         private System.Windows.Forms.Label labellocation;
         private System.Windows.Forms.ComboBox cmbCategory;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label Category;
+        private System.Windows.Forms.Label Description;
         private System.Windows.Forms.RichTextBox rtbDescription;
         private System.Windows.Forms.Button btnAttachFile;
         private System.Windows.Forms.Label lblAttachment;
@@ -181,3 +181,4 @@
         private System.Windows.Forms.Button btnBack;
     }
 }
+
