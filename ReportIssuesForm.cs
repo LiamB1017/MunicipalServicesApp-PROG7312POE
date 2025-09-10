@@ -10,22 +10,20 @@ using System.Windows.Forms;
 
 namespace MunicipalServicesApp
 {
-    public partial class MainMenuForm: Form
+    public partial class ReportIssuesForm: Form
     {
-        public MainMenuForm()
+        public ReportIssuesForm()
         {
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnAttachFile_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnReportIssues_Click(object sender, EventArgs e)
-        {
-            ReportIssuesForm reportForm = new ReportIssuesForm();
-            reportForm.ShowDialog();
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                lblAttachment.Text = ofd.FileName;
+            }
         }
     }
 }
