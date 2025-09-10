@@ -54,7 +54,12 @@ namespace MunicipalServicesApp
 
         private void btnBack_Click(object sender, EventArgs e)
         {
+            // Show the main menu form
+            MainMenuForm mainMenu = new MainMenuForm();
+            mainMenu.Show();
 
+            // Close the current form
+            this.Close();
         }
     }
 }
