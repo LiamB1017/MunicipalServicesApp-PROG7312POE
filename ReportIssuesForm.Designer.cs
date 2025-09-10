@@ -33,7 +33,7 @@
             this.cmbCategory = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.rtbdescription = new System.Windows.Forms.RichTextBox();
+            this.rtbDescription = new System.Windows.Forms.RichTextBox();
             this.btnAttachFile = new System.Windows.Forms.Button();
             this.lblAttachment = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
@@ -87,13 +87,13 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Description";
             // 
-            // rtbdescription
+            // rtbDescription
             // 
-            this.rtbdescription.Location = new System.Drawing.Point(469, 110);
-            this.rtbdescription.Name = "rtbdescription";
-            this.rtbdescription.Size = new System.Drawing.Size(100, 96);
-            this.rtbdescription.TabIndex = 5;
-            this.rtbdescription.Text = "";
+            this.rtbDescription.Location = new System.Drawing.Point(469, 110);
+            this.rtbDescription.Name = "rtbDescription";
+            this.rtbDescription.Size = new System.Drawing.Size(100, 96);
+            this.rtbDescription.TabIndex = 5;
+            this.rtbDescription.Text = "";
             // 
             // btnAttachFile
             // 
@@ -122,6 +122,7 @@
             this.btnSubmit.TabIndex = 8;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // lblEngagement
             // 
@@ -140,6 +141,7 @@
             this.btnBack.TabIndex = 10;
             this.btnBack.Text = "Back to Main Menu";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // ReportIssuesForm
             // 
@@ -151,7 +153,7 @@
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.lblAttachment);
             this.Controls.Add(this.btnAttachFile);
-            this.Controls.Add(this.rtbdescription);
+            this.Controls.Add(this.rtbDescription);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbCategory);
@@ -171,7 +173,7 @@
         private System.Windows.Forms.ComboBox cmbCategory;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RichTextBox rtbdescription;
+        private System.Windows.Forms.RichTextBox rtbDescription;
         private System.Windows.Forms.Button btnAttachFile;
         private System.Windows.Forms.Label lblAttachment;
         private System.Windows.Forms.Button btnSubmit;
