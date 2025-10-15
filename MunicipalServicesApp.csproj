@@ -46,12 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\LocalEventsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LocalEventsForm.Designer.cs">
+      <DependentUpon>LocalEventsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\MainMenuForm.Designer.cs">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Event.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportedIssue.cs" />
@@ -61,6 +68,9 @@
     <Compile Include="Forms\ReportIssuesForm.Designer.cs">
       <DependentUpon>ReportIssuesForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\LocalEventsForm.resx">
+      <DependentUpon>LocalEventsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -89,8 +99,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
