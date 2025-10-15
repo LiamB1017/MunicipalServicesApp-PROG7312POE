@@ -53,7 +53,7 @@
             this.btnLocalEvents.TabIndex = 1;
             this.btnLocalEvents.Text = "Local Events and Announcements";
             this.btnLocalEvents.UseVisualStyleBackColor = true;
-            this.btnLocalEvents.Click += new System.EventHandler(this.button2_Click);
+            this.btnLocalEvents.Click += new System.EventHandler(this.btnLocalEvents_Click);
             // 
             // btnServiceStatus
             // 
