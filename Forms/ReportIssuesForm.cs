@@ -66,5 +66,10 @@ namespace MunicipalServicesApp
         {
 
         }
+
+        private void ReportIssuesForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

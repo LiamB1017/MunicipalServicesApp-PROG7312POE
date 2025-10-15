@@ -41,82 +41,87 @@
             // 
             // lblTitle
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Location = new System.Drawing.Point(451, 58);
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.Location = new System.Drawing.Point(137, 8);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(192, 15);
+            this.lblTitle.Size = new System.Drawing.Size(406, 28);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Local Events and Announcements";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(454, 147);
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtSearch.Location = new System.Drawing.Point(142, 58);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(100, 20);
+            this.txtSearch.Size = new System.Drawing.Size(258, 30);
             this.txtSearch.TabIndex = 1;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(213, 122);
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnSearch.Location = new System.Drawing.Point(420, 61);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.Size = new System.Drawing.Size(77, 27);
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // cmbCategory
             // 
+            this.cmbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCategory.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbCategory.FormattingEnabled = true;
-            this.cmbCategory.Items.AddRange(new object[] {
-            "Community",
-            "Sports",
-            "Culture",
-            "Education",
-            "Health"});
-            this.cmbCategory.Location = new System.Drawing.Point(166, 221);
+            this.cmbCategory.Location = new System.Drawing.Point(142, 89);
             this.cmbCategory.Name = "cmbCategory";
-            this.cmbCategory.Size = new System.Drawing.Size(121, 21);
+            this.cmbCategory.Size = new System.Drawing.Size(258, 31);
             this.cmbCategory.TabIndex = 3;
             // 
             // lstEvents
             // 
+            this.lstEvents.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lstEvents.FormattingEnabled = true;
-            this.lstEvents.Location = new System.Drawing.Point(425, 197);
+            this.lstEvents.ItemHeight = 23;
+            this.lstEvents.Location = new System.Drawing.Point(142, 163);
             this.lstEvents.Name = "lstEvents";
-            this.lstEvents.Size = new System.Drawing.Size(120, 95);
+            this.lstEvents.Size = new System.Drawing.Size(314, 73);
             this.lstEvents.TabIndex = 4;
             // 
             // btnRecommend
             // 
-            this.btnRecommend.Location = new System.Drawing.Point(435, 315);
+            this.btnRecommend.Location = new System.Drawing.Point(461, 343);
             this.btnRecommend.Name = "btnRecommend";
-            this.btnRecommend.Size = new System.Drawing.Size(75, 23);
+            this.btnRecommend.Size = new System.Drawing.Size(64, 29);
             this.btnRecommend.TabIndex = 5;
             this.btnRecommend.Text = "Show Recommendations";
             this.btnRecommend.UseVisualStyleBackColor = true;
+            this.btnRecommend.Click += new System.EventHandler(this.btnRecommend_Click);
             // 
             // lblRecommendations
             // 
-            this.lblRecommendations.AutoSize = true;
-            this.lblRecommendations.Location = new System.Drawing.Point(435, 364);
+            this.lblRecommendations.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblRecommendations.Location = new System.Drawing.Point(139, 251);
             this.lblRecommendations.Name = "lblRecommendations";
-            this.lblRecommendations.Size = new System.Drawing.Size(115, 15);
-            this.lblRecommendations.TabIndex = 6;
-            this.lblRecommendations.Text = "Recommendations:";
+            this.lblRecommendations.Size = new System.Drawing.Size(171, 22);
+            this.lblRecommendations.TabIndex = 7;
+            this.lblRecommendations.Text = "Recommended Events:";
             // 
             // lstRecommendations
             // 
+            this.lstRecommendations.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lstRecommendations.FormattingEnabled = true;
-            this.lstRecommendations.Location = new System.Drawing.Point(626, 188);
+            this.lstRecommendations.ItemHeight = 23;
+            this.lstRecommendations.Location = new System.Drawing.Point(141, 276);
             this.lstRecommendations.Name = "lstRecommendations";
-            this.lstRecommendations.Size = new System.Drawing.Size(120, 95);
-            this.lstRecommendations.TabIndex = 7;
+            this.lstRecommendations.Size = new System.Drawing.Size(314, 96);
+            this.lstRecommendations.TabIndex = 8;
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(438, 401);
+            this.btnBack.Location = new System.Drawing.Point(569, 371);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.Size = new System.Drawing.Size(108, 29);
             this.btnBack.TabIndex = 8;
             this.btnBack.Text = "Back to Main Menu";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -125,7 +130,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(689, 412);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lstRecommendations);
             this.Controls.Add(this.lblRecommendations);
@@ -136,8 +141,8 @@
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.lblTitle);
             this.Name = "LocalEventsForm";
-            this.Text = "LocalEventsForm";
-            this.Load += new System.EventHandler(this.LocalEventsForm_Load);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Local Events and Announcements";
             this.ResumeLayout(false);
             this.PerformLayout();
 

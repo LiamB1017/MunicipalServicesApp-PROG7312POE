@@ -49,7 +49,7 @@
             this.btnLocalEvents.Location = new System.Drawing.Point(75, 89);
             this.btnLocalEvents.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLocalEvents.Name = "btnLocalEvents";
-            this.btnLocalEvents.Size = new System.Drawing.Size(150, 32);
+            this.btnLocalEvents.Size = new System.Drawing.Size(150, 45);
             this.btnLocalEvents.TabIndex = 1;
             this.btnLocalEvents.Text = "Local Events and Announcements";
             this.btnLocalEvents.UseVisualStyleBackColor = true;
@@ -58,13 +58,14 @@
             // btnServiceStatus
             // 
             this.btnServiceStatus.Enabled = false;
-            this.btnServiceStatus.Location = new System.Drawing.Point(75, 138);
+            this.btnServiceStatus.Location = new System.Drawing.Point(75, 149);
             this.btnServiceStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnServiceStatus.Name = "btnServiceStatus";
             this.btnServiceStatus.Size = new System.Drawing.Size(150, 32);
             this.btnServiceStatus.TabIndex = 2;
             this.btnServiceStatus.Text = "Service Request Status";
             this.btnServiceStatus.UseVisualStyleBackColor = true;
+            this.btnServiceStatus.Click += new System.EventHandler(this.btnServiceStatus_Click);
             // 
             // MainMenuForm
             // 
