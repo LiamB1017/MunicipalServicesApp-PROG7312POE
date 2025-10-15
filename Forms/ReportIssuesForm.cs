@@ -61,5 +61,10 @@ namespace MunicipalServicesApp
             // Close the current form
             this.Close();
         }
+
+        private void labellocation_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -27,5 +27,11 @@ namespace MunicipalServicesApp
             ReportIssuesForm reportForm = new ReportIssuesForm();
             reportForm.ShowDialog();
         }
+        private void btnLocalEvents_Click(object sender, EventArgs e)
+        {
+            LocalEventsForm eventsForm = new LocalEventsForm();
+            eventsForm.Show();
+            this.Hide();
+        }
     }
 }

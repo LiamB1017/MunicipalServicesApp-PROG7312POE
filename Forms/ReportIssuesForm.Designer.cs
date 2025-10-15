@@ -56,6 +56,7 @@
             this.labellocation.Size = new System.Drawing.Size(58, 16);
             this.labellocation.TabIndex = 1;
             this.labellocation.Text = "Location";
+            this.labellocation.Click += new System.EventHandler(this.labellocation_Click);
             // 
             // cmbCategory
             // 
