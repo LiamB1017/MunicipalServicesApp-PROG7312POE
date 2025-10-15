@@ -20,14 +20,16 @@ namespace MunicipalServicesApp
 
         private void btnReportIssues_Click(object sender, EventArgs e)
         {
-            ReportIssuesForm reportForm = new ReportIssuesForm();
-            reportForm.ShowDialog();
+            ReportIssuesForm reportForm = new ReportIssuesForm(this);
+            reportForm.Show();
+            this.Hide();
         }
 
         private void btnLocalEvents_Click(object sender, EventArgs e)
         {
             LocalEventsForm eventsForm = new LocalEventsForm(this);
-            eventsForm.ShowDialog();
+            eventsForm.Show();
+            this.Hide();
         }
 
 

@@ -17,14 +17,14 @@ namespace MunicipalServicesApp.Forms
         private Queue<string> recentSearches;
         private HashSet<string> uniqueCategories;
 
-        // Store reference to the main menu
+        
         private MainMenuForm mainMenuForm;
 
-        // Constructor that accepts the main menu
+        
         public LocalEventsForm(MainMenuForm menuForm)
         {
             InitializeComponent();
-            mainMenuForm = menuForm;
+            this.mainMenuForm = menuForm;
 
             eventSchedule = new SortedDictionary<DateTime, List<Event>>();
             recentSearches = new Queue<string>();
@@ -54,7 +54,7 @@ namespace MunicipalServicesApp.Forms
                 uniqueCategories.Add(ev.Category);
             }
 
-            // Populate category dropdown
+           
             cmbCategory.Items.Clear();
             cmbCategory.Items.Add("");
             foreach (var category in uniqueCategories)
@@ -121,7 +121,7 @@ namespace MunicipalServicesApp.Forms
                 return;
             }
 
-            // Get the most frequent search keyword
+            
             var mostCommonSearch = recentSearches
                 .GroupBy(s => s)
                 .OrderByDescending(g => g.Count())
@@ -151,14 +151,10 @@ namespace MunicipalServicesApp.Forms
         }
 
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void btnBack_Click_1(object sender, EventArgs e)
         {
-            // Show the main menu form
-            MainMenuForm mainMenu = new MainMenuForm();
-            mainMenu.Show();
-
-            // Close the current form
-            this.Close();
+            this.Hide();
+            mainMenuForm.Show();
         }
     }
 }

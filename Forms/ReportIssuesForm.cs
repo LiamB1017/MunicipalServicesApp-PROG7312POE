@@ -16,6 +16,14 @@ namespace MunicipalServicesApp
         {
             InitializeComponent();
         }
+        private MainMenuForm mainMenuForm;
+
+        public ReportIssuesForm(MainMenuForm mainMenuForm)
+        {
+            InitializeComponent();
+            this.mainMenuForm = mainMenuForm;
+        }
+
 
         private void btnAttachFile_Click(object sender, EventArgs e)
         {
@@ -55,11 +63,8 @@ namespace MunicipalServicesApp
         private void btnBack_Click(object sender, EventArgs e)
         {
             // Show the main menu form
-            MainMenuForm mainMenu = new MainMenuForm();
-            mainMenu.Show();
-
-            // Close the current form
-            this.Close();
+            this.Hide();
+            mainMenuForm.Show();
         }
 
         private void labellocation_Click(object sender, EventArgs e)
