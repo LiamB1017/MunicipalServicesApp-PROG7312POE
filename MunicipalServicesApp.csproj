@@ -64,6 +64,7 @@
     <Compile Include="Forms\ServiceRequestStatusForm.Designer.cs">
       <DependentUpon>ServiceRequestStatusForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\DataStore.cs" />
     <Compile Include="Models\Event.cs" />
     <Compile Include="Models\Graph.cs" />
     <Compile Include="Models\ServiceRequestNode.cs" />

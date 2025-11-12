@@ -30,7 +30,7 @@ namespace MunicipalServicesApp.Forms
 
         private void LoadRequestsIntoStructures()
         {
-            foreach (var req in IssueStorage.ReportedIssues)
+            foreach (var req in DataStore.Requests)
             {
                 int id = req.RequestID;
                 tree.Insert(id, req);
@@ -38,7 +38,7 @@ namespace MunicipalServicesApp.Forms
                 graph.AddNode(id);
             }
 
-            var ids = IssueStorage.ReportedIssues.Select(r => r.RequestID).OrderBy(x => x).ToList();
+            var ids = DataStore.Requests.Select(r => r.RequestID).OrderBy(x => x).ToList();
             for (int i = 0; i + 1 < ids.Count; i++)
             {
                 int a = ids[i], b = ids[i + 1];

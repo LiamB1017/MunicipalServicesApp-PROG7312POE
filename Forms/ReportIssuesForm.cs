@@ -36,29 +36,25 @@ namespace MunicipalServicesApp
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            string location = txtLocation.Text;
-            string category = cmbCategory.SelectedItem?.ToString();
-            string description = rtbDescription.Text;
-            string attachment = lblAttachment.Text;
+            string location = txtLocation.Text.Trim();
+            string category = cmbCategory.Text.Trim();
+            string description = txtLocation.Text.Trim();
+            string filePath = txtLocation.Text.Trim();
 
-            if (string.IsNullOrWhiteSpace(location) || string.IsNullOrWhiteSpace(category))
+            if (string.IsNullOrEmpty(location) || string.IsNullOrEmpty(category) || string.IsNullOrEmpty(description))
             {
-                MessageBox.Show("Please fill in all required fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please fill in all fields.");
                 return;
             }
 
-            // Save to in-memory list (later can go to database)
-            IssueStorage.ReportedIssues.Add(new ReportedIssue
-            {
-                Location = location,
-                Category = category,
-                Description = description,
-                Attachment = attachment
-            });
+            ReportedIssue issue = new ReportedIssue(location, category, description, filePath);
+            DataStore.Requests.Add(issue);
 
-            lblEngagement.Text = "Thank you for reporting! Your input helps us improve services.";
-            MessageBox.Show("Issue submitted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show($"Issue submitted successfully!\nYour Request ID is: {issue.RequestID}");
+            
         }
+
+    
 
         private void btnBack_Click(object sender, EventArgs e)
         {
