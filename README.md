@@ -91,12 +91,14 @@ DFS (Depth-First Search): Traverses connected nodes recursively.
 Prim’s MST: Generates the minimal connection network among requests.
 
 # Data Structures Implemented
-Data Structure	Description	Application in Project
-Binary Search Tree (BST)	Organizes and retrieves requests efficiently by ID.	Enables quick search, insertion, and sorted display of requests in the Service Request Status form.
-Graph	Models relationships between service requests.	Used to demonstrate traversal algorithms (BFS, DFS) and Prim’s MST.
-Queue	Follows FIFO (First-In-First-Out) principle.	Used to manage recent search history in Local Events.
-HashSet	Ensures unique entries.	Stores unique categories of events to populate the dropdown filter.
-SortedDictionary	Maintains key-value pairs in sorted order.	Used to store and display local events chronologically.
+| Data Structure               | Description                                         | Application in Project                                                                              |
+| ---------------------------- | --------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| **Binary Search Tree (BST)** | Organizes and retrieves requests efficiently by ID. | Enables quick search, insertion, and sorted display of requests in the Service Request Status form. |
+| **Graph**                    | Models relationships between service requests.      | Used to demonstrate traversal algorithms (BFS, DFS) and Prim’s MST.                                 |
+| **Queue**                    | Follows FIFO (First-In-First-Out) principle.        | Used to manage recent search history in Local Events.                                               |
+| **HashSet**                  | Ensures unique entries.                             | Stores unique categories of events to populate the dropdown filter.                                 |
+| **SortedDictionary**         | Maintains key-value pairs in sorted order.          | Used to store and display local events chronologically.                                             |
+
  
 # Data Storage
 
@@ -107,14 +109,16 @@ Each issue instance (from ReportedIssue) is saved and retrieved across forms.
 The ServiceRequestStatusForm dynamically loads all reports from this shared datastore into the BST and Graph.
 
 # Improvements from Part 1 & 2
-Area	Issue Identified	Fix Implemented
-Navigation	Multiple instances of Main Menu opened after returning from other forms.	Modified navigation logic to show existing Main Menu form instead of creating new instances.
-Event Recommendations	Recommendations were limited to exact search history.	Logic updated to suggest events containing related keywords or categories.
-Display Issues	Lists were not updating correctly when data changed.	Implemented refresh methods to reload event and issue lists after submissions.
-“Show” Button	Not displaying recommendations.	Fixed event handler and binding logic.
-Missing Shared Data	Requests were not visible in Service Request Status.	Implemented centralized DataStore to hold reported issues across all forms.
-Lookup Errors	“Request ID … has no associated data” appeared.	Fixed tree search to retrieve correct node payload.
-Code Attribution	Improved comments and documentation in all classes.	Updated to ensure academic integrity compliance.
+| Area                  | Issue Identified                                                         | Fix Implemented                                                                              |
+| --------------------- | ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- |
+| Navigation            | Multiple instances of Main Menu opened after returning from other forms. | Modified navigation logic to show existing Main Menu form instead of creating new instances. |
+| Event Recommendations | Recommendations were limited to exact search history.                    | Logic updated to suggest events containing related keywords or categories.                   |
+| Display Issues        | Lists were not updating correctly when data changed.                     | Implemented refresh methods to reload event and issue lists after submissions.               |
+| “Show” Button         | Not displaying recommendations.                                          | Fixed event handler and binding logic.                                                       |
+| Missing Shared Data   | Requests were not visible in Service Request Status.                     | Implemented centralized `DataStore` to hold reported issues across all forms.                |
+| Lookup Errors         | “Request ID … has no associated data” appeared.                          | Fixed tree search to retrieve correct node payload.                                          |
+| Code Attribution      | Improved comments and documentation in all classes.                      | Updated to ensure academic integrity compliance.                                             |
+
 # Feedback and Fixes
 
 # Feedback Received:
