@@ -18,6 +18,10 @@ namespace MunicipalServicesApp
         public string FilePath { get; set; }
         public string Status { get; set; }
         public string Attachment { get; internal set; }
+        public object LocationText { get; internal set; }
+        public object CreatedAt { get; internal set; }
+        public object CurrentStatus { get; internal set; }
+        public List<string> AttachmentPaths { get; internal set; }
 
         public ReportedIssue(string location, string category, string description, string filePath)
         {
@@ -27,6 +31,13 @@ namespace MunicipalServicesApp
             Description = description;
             FilePath = filePath;
             Status = "Pending";
+        }
+
+        public ReportedIssue(string location, string category, string filePath)
+        {
+            Location = location;
+            Category = category;
+            FilePath = filePath;
         }
 
         public override string ToString()

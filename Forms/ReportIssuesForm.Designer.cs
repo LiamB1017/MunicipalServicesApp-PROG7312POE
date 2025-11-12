@@ -43,19 +43,18 @@
             // 
             // txtLocation
             // 
-            this.txtLocation.Location = new System.Drawing.Point(112, 24);
-            this.txtLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLocation.Location = new System.Drawing.Point(149, 30);
+            this.txtLocation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtLocation.Name = "txtLocation";
-            this.txtLocation.Size = new System.Drawing.Size(301, 20);
+            this.txtLocation.Size = new System.Drawing.Size(400, 22);
             this.txtLocation.TabIndex = 0;
             // 
             // labellocation
             // 
             this.labellocation.AutoSize = true;
-            this.labellocation.Location = new System.Drawing.Point(38, 27);
-            this.labellocation.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labellocation.Location = new System.Drawing.Point(51, 33);
             this.labellocation.Name = "labellocation";
-            this.labellocation.Size = new System.Drawing.Size(54, 15);
+            this.labellocation.Size = new System.Drawing.Size(58, 16);
             this.labellocation.TabIndex = 1;
             this.labellocation.Text = "Location";
             this.labellocation.Click += new System.EventHandler(this.labellocation_Click);
@@ -66,48 +65,48 @@
             this.cmbCategory.Items.AddRange(new object[] {
             "Sanitation",
             "Roads",
-            "Utilities"});
-            this.cmbCategory.Location = new System.Drawing.Point(112, 57);
-            this.cmbCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            "Utilities",
+            "Health",
+            "Public Transport"});
+            this.cmbCategory.Location = new System.Drawing.Point(149, 70);
+            this.cmbCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbCategory.Name = "cmbCategory";
-            this.cmbCategory.Size = new System.Drawing.Size(151, 21);
+            this.cmbCategory.Size = new System.Drawing.Size(200, 24);
             this.cmbCategory.TabIndex = 2;
             // 
             // Category
             // 
             this.Category.AutoSize = true;
-            this.Category.Location = new System.Drawing.Point(38, 59);
-            this.Category.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Category.Location = new System.Drawing.Point(51, 73);
             this.Category.Name = "Category";
-            this.Category.Size = new System.Drawing.Size(55, 15);
+            this.Category.Size = new System.Drawing.Size(62, 16);
             this.Category.TabIndex = 3;
             this.Category.Text = "Category";
             // 
             // Description
             // 
             this.Description.AutoSize = true;
-            this.Description.Location = new System.Drawing.Point(38, 98);
-            this.Description.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Description.Location = new System.Drawing.Point(51, 121);
             this.Description.Name = "Description";
-            this.Description.Size = new System.Drawing.Size(69, 15);
+            this.Description.Size = new System.Drawing.Size(75, 16);
             this.Description.TabIndex = 4;
             this.Description.Text = "Description";
             // 
             // rtbDescription
             // 
-            this.rtbDescription.Location = new System.Drawing.Point(112, 93);
-            this.rtbDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rtbDescription.Location = new System.Drawing.Point(149, 114);
+            this.rtbDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rtbDescription.Name = "rtbDescription";
-            this.rtbDescription.Size = new System.Drawing.Size(301, 98);
+            this.rtbDescription.Size = new System.Drawing.Size(400, 120);
             this.rtbDescription.TabIndex = 5;
             this.rtbDescription.Text = "";
             // 
             // btnAttachFile
             // 
-            this.btnAttachFile.Location = new System.Drawing.Point(112, 207);
-            this.btnAttachFile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAttachFile.Location = new System.Drawing.Point(149, 255);
+            this.btnAttachFile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAttachFile.Name = "btnAttachFile";
-            this.btnAttachFile.Size = new System.Drawing.Size(75, 28);
+            this.btnAttachFile.Size = new System.Drawing.Size(100, 34);
             this.btnAttachFile.TabIndex = 6;
             this.btnAttachFile.Text = "Attach File";
             this.btnAttachFile.UseVisualStyleBackColor = true;
@@ -116,19 +115,18 @@
             // lblAttachment
             // 
             this.lblAttachment.AutoSize = true;
-            this.lblAttachment.Location = new System.Drawing.Point(38, 211);
-            this.lblAttachment.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAttachment.Location = new System.Drawing.Point(51, 260);
             this.lblAttachment.Name = "lblAttachment";
-            this.lblAttachment.Size = new System.Drawing.Size(91, 15);
+            this.lblAttachment.Size = new System.Drawing.Size(100, 16);
             this.lblAttachment.TabIndex = 7;
             this.lblAttachment.Text = "No file selected";
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(112, 252);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubmit.Location = new System.Drawing.Point(149, 310);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(75, 28);
+            this.btnSubmit.Size = new System.Drawing.Size(100, 34);
             this.btnSubmit.TabIndex = 8;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
@@ -137,19 +135,18 @@
             // lblEngagement
             // 
             this.lblEngagement.AutoSize = true;
-            this.lblEngagement.Location = new System.Drawing.Point(110, 293);
-            this.lblEngagement.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEngagement.Location = new System.Drawing.Point(147, 361);
             this.lblEngagement.Name = "lblEngagement";
-            this.lblEngagement.Size = new System.Drawing.Size(116, 15);
+            this.lblEngagement.Size = new System.Drawing.Size(127, 16);
             this.lblEngagement.TabIndex = 9;
             this.lblEngagement.Text = "We value your input!";
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(376, 303);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Location = new System.Drawing.Point(501, 373);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(112, 28);
+            this.btnBack.Size = new System.Drawing.Size(149, 34);
             this.btnBack.TabIndex = 10;
             this.btnBack.Text = "Back to Main Menu";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -157,9 +154,9 @@
             // 
             // ReportIssuesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 341);
+            this.ClientSize = new System.Drawing.Size(651, 420);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblEngagement);
             this.Controls.Add(this.btnSubmit);
@@ -171,7 +168,7 @@
             this.Controls.Add(this.cmbCategory);
             this.Controls.Add(this.labellocation);
             this.Controls.Add(this.txtLocation);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ReportIssuesForm";
             this.Text = "ReportIssuesForm";
             this.Load += new System.EventHandler(this.ReportIssuesForm_Load);
