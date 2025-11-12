@@ -35,7 +35,9 @@ namespace MunicipalServicesApp
 
         private void btnServiceStatus_Click(object sender, EventArgs e)
         {
-            // You’ll implement this in Part 3.
+            ServiceRequestStatusForm status = new ServiceRequestStatusForm(this);
+            status.Show();
+            this.Hide();
         }
     }
 }

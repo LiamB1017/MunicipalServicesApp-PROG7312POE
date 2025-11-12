@@ -41,11 +41,62 @@ namespace MunicipalServicesApp.Models
         }
         private int GetBalance(ServiceRequestNode node) => node == null ? 0 : Height(node.Left) - Height(node.Right);
 
-        public void Insert(int key, Request payload)
+        public void Insert(int key, ServiceRequestNode payload)
         {
             Root = InsertInternal(Root, key, payload);
         }
-        private ServiceRequestNode InsertInternal(ServiceRequestNode node, int key, Request payload)
+
+        private ServiceRequestNode InsertInternal(ServiceRequestNode root, int key, ServiceRequestNode payload)
+        {
+            // 1. Perform normal BST insertion
+            if (root == null)
+                return payload;
+
+            if (key < root.Key)
+                root.Left = InsertInternal(root.Left, key, payload);
+            else if (key > root.Key)
+                root.Right = InsertInternal(root.Right, key, payload);
+            else
+            {
+                // Duplicate key: update payload
+                root.Payload = payload.Payload;
+                return root;
+            }
+
+            // 2. Update height
+            root.Height = 1 + Math.Max(Height(root.Left), Height(root.Right));
+
+            // 3. Get balance factor
+            int balance = GetBalance(root);
+
+            // 4. Balance the tree
+            // Left Left Case
+            if (balance > 1 && key < root.Left.Key)
+                return RightRotate(root);
+
+            // Right Right Case
+            if (balance < -1 && key > root.Right.Key)
+                return LeftRotate(root);
+
+            // Left Right Case
+            if (balance > 1 && key > root.Left.Key)
+            {
+                root.Left = LeftRotate(root.Left);
+                return RightRotate(root);
+            }
+
+            // Right Left Case
+            if (balance < -1 && key < root.Right.Key)
+            {
+                root.Right = RightRotate(root.Right);
+                return LeftRotate(root);
+            }
+
+            return root;
+        }
+
+
+        private ServiceRequestNode InsertInternal(ServiceRequestNode node, int key, ServiceRequestTree payload)
         {
             if (node == null)
                 return new ServiceRequestNode(key, payload);
@@ -131,5 +182,12 @@ namespace MunicipalServicesApp.Models
             PreOrderInternal(node.Left, acc);
             PreOrderInternal(node.Right, acc);
         }
+
+        internal void Insert(int id, ReportedIssue req)
+        {
+            var node = new ServiceRequestNode(id, req);
+            Root = InsertInternal(Root, id, node);
+        }
+
     }
 }

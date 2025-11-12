@@ -13,6 +13,7 @@ namespace MunicipalServicesApp
         public string Category { get; set; }
         public string Description { get; set; }
         public string Attachment { get; set; }
+        public int RequestID { get; internal set; }
     }
 
 }

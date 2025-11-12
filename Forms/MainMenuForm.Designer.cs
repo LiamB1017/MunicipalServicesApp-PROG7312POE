@@ -35,10 +35,10 @@
             // 
             // btnReportIssues
             // 
-            this.btnReportIssues.Location = new System.Drawing.Point(75, 41);
-            this.btnReportIssues.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReportIssues.Location = new System.Drawing.Point(100, 50);
+            this.btnReportIssues.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReportIssues.Name = "btnReportIssues";
-            this.btnReportIssues.Size = new System.Drawing.Size(150, 32);
+            this.btnReportIssues.Size = new System.Drawing.Size(200, 39);
             this.btnReportIssues.TabIndex = 0;
             this.btnReportIssues.Text = "Report Issues";
             this.btnReportIssues.UseVisualStyleBackColor = true;
@@ -46,10 +46,10 @@
             // 
             // btnLocalEvents
             // 
-            this.btnLocalEvents.Location = new System.Drawing.Point(75, 89);
-            this.btnLocalEvents.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLocalEvents.Location = new System.Drawing.Point(100, 110);
+            this.btnLocalEvents.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLocalEvents.Name = "btnLocalEvents";
-            this.btnLocalEvents.Size = new System.Drawing.Size(150, 45);
+            this.btnLocalEvents.Size = new System.Drawing.Size(200, 55);
             this.btnLocalEvents.TabIndex = 1;
             this.btnLocalEvents.Text = "Local Events and Announcements";
             this.btnLocalEvents.UseVisualStyleBackColor = true;
@@ -57,11 +57,10 @@
             // 
             // btnServiceStatus
             // 
-            this.btnServiceStatus.Enabled = false;
-            this.btnServiceStatus.Location = new System.Drawing.Point(75, 149);
-            this.btnServiceStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnServiceStatus.Location = new System.Drawing.Point(100, 183);
+            this.btnServiceStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnServiceStatus.Name = "btnServiceStatus";
-            this.btnServiceStatus.Size = new System.Drawing.Size(150, 32);
+            this.btnServiceStatus.Size = new System.Drawing.Size(200, 39);
             this.btnServiceStatus.TabIndex = 2;
             this.btnServiceStatus.Text = "Service Request Status";
             this.btnServiceStatus.UseVisualStyleBackColor = true;
@@ -69,13 +68,13 @@
             // 
             // MainMenuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(315, 228);
+            this.ClientSize = new System.Drawing.Size(420, 281);
             this.Controls.Add(this.btnServiceStatus);
             this.Controls.Add(this.btnLocalEvents);
             this.Controls.Add(this.btnReportIssues);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainMenuForm";
             this.Text = "Form1";
             this.ResumeLayout(false);

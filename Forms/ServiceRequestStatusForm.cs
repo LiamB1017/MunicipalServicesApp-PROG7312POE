@@ -30,7 +30,7 @@ namespace MunicipalServicesApp.Forms
 
         private void LoadRequestsIntoStructures()
         {
-            foreach (var req in DataStore.Requests)
+            foreach (var req in IssueStorage.ReportedIssues)
             {
                 int id = req.RequestID;
                 tree.Insert(id, req);
@@ -38,7 +38,7 @@ namespace MunicipalServicesApp.Forms
                 graph.AddNode(id);
             }
 
-            var ids = DataStore.Requests.Select(r => r.RequestID).OrderBy(x => x).ToList(); 
+            var ids = IssueStorage.ReportedIssues.Select(r => r.RequestID).OrderBy(x => x).ToList();
             for (int i = 0; i + 1 < ids.Count; i++)
             {
                 int a = ids[i], b = ids[i + 1];
@@ -60,21 +60,27 @@ namespace MunicipalServicesApp.Forms
                 return;
             }
 
-            var node = tree.Search(id);
+            var node = tree.Search(id); // Ensure 'node' is declared before usage
             if (node == null)
             {
                 MessageBox.Show($"Request ID {id} not found.", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+
+            var req = node.Payload; // Correctly use 'node' after declaration
+            if (req == null)
+            {
+                MessageBox.Show($"Request ID {id} has no associated data.", "Data Missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             txtDetails.Clear();
-            var req = node.Payload;
             txtDetails.AppendText($"ID: {node.Key}\r\n");
             txtDetails.AppendText($"Location: {req.LocationText}\r\n");
             txtDetails.AppendText($"Category: {req.Category}\r\n");
             txtDetails.AppendText($"Created: {req.CreatedAt}\r\n");
             txtDetails.AppendText($"Status: {req.CurrentStatus}\r\n");
             txtDetails.AppendText($"Attachments: {string.Join(", ", req.AttachmentPaths ?? new List<string>())}\r\n");
-
         }
         private void btnMST_Click(object sender, EventArgs e)
         {
@@ -117,7 +123,7 @@ namespace MunicipalServicesApp.Forms
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            mainMenu.Show();
+            mainMenuForm.Show(); 
         }
 
     }
