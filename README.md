@@ -1,4 +1,4 @@
-README.md – Municipal Services Application (Final POE)
+# README.md – Municipal Services Application (Final POE)
 # Overview
 
 The Municipal Services Application is a comprehensive desktop system developed in C# (.NET Framework 4.7.2) that allows South African residents to:
@@ -22,7 +22,7 @@ Build the project using Ctrl + Shift + B.
 Press F5 or click Start to run the application.
 
 # Features Implemented
-Main Menu
+# Main Menu
 
 Central navigation hub.
 
@@ -54,7 +54,7 @@ The ReportedIssue class represents each user report.
 
 Provides a confirmation message and allows navigation back to the main menu.
 
-Local Events & Announcements
+# Local Events & Announcements
 
 Displays a list of community events stored in a SortedDictionary structure.
 
@@ -68,7 +68,7 @@ A Queue is used to store recent searches, and a HashSet stores unique event cate
 
 Recommendation feature uses recent search keywords to suggest events.
 
-Service Request Status (Part 3)
+# Service Request Status (Part 3)
 
 This is the major enhancement introduced in Part 3.
 
