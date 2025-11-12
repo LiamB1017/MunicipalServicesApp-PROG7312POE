@@ -49,8 +49,20 @@ namespace MunicipalServicesApp.Forms
         private void RefreshRequestsView()
         {
             lstRequests.Items.Clear();
-            var lines = tree.InOrder();
-            foreach (var line in lines) lstRequests.Items.Add(line);
+
+            if (DataStore.Requests == null || DataStore.Requests.Count == 0)
+            {
+                lstRequests.Items.Add("No service requests found.");
+                return;
+            }
+
+            lstRequests.Items.Add("Loaded Service Requests:");
+            lstRequests.Items.Add(""); // blank line
+
+            foreach (var req in DataStore.Requests)
+            {
+                lstRequests.Items.Add($"[{req.RequestID}] {req.Category} - {req.Location} ({req.Status})");
+            }
         }
         private void btnLookup_Click(object sender, EventArgs e)
         {
