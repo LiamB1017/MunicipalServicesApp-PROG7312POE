@@ -38,8 +38,8 @@ namespace MunicipalServicesApp
         {
             string location = txtLocation.Text.Trim();
             string category = cmbCategory.Text.Trim();
-            string description = txtLocation.Text.Trim();
-            string filePath = txtLocation.Text.Trim();
+            string description = rtbDescription.Text.Trim();
+            string filePath = btnAttachFile.Text.Trim();
 
             if (string.IsNullOrEmpty(location) || string.IsNullOrEmpty(category) || string.IsNullOrEmpty(description))
             {

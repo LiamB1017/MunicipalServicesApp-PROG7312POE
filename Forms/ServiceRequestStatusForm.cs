@@ -87,12 +87,17 @@ namespace MunicipalServicesApp.Forms
             }
 
             txtDetails.Clear();
-            txtDetails.AppendText($"ID: {node.Key}\r\n");
-            txtDetails.AppendText($"Location: {req.LocationText}\r\n");
+            txtDetails.AppendText("🧾 SERVICE REQUEST DETAILS\r\n");
+            txtDetails.AppendText("----------------------------------------\r\n");
+            txtDetails.AppendText($"Request ID: {node.Key}\r\n");
+            txtDetails.AppendText($"Location: {req.Location}\r\n");
             txtDetails.AppendText($"Category: {req.Category}\r\n");
-            txtDetails.AppendText($"Created: {req.CreatedAt}\r\n");
-            txtDetails.AppendText($"Status: {req.CurrentStatus}\r\n");
-            txtDetails.AppendText($"Attachments: {string.Join(", ", req.AttachmentPaths ?? new List<string>())}\r\n");
+            txtDetails.AppendText($"Description: {req.Description}\r\n");
+            txtDetails.AppendText($"Status: {req.Status}\r\n");
+            txtDetails.AppendText($"Attachment: {(string.IsNullOrEmpty(req.FilePath) ? "None" : req.FilePath)}\r\n");
+            txtDetails.AppendText("----------------------------------------\r\n");
+            txtDetails.AppendText("✅ Lookup successful!\r\n");
+
         }
         private void btnMST_Click(object sender, EventArgs e)
         {
